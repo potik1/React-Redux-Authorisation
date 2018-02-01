@@ -12,12 +12,12 @@ and node.js server.
 
 #### server node.js:
 
-`>` cd server/
-`>` npm install
-`> `npm run dev]()
+`> cd server/ `
+`> npm install `
+`> npm run dev`
 
 #### client
 
-> cd auth_client/
-> npm install
-> npm start
+`> cd auth_client/`
+`> npm install`
+`> npm start`
