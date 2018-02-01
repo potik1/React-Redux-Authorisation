@@ -14,9 +14,11 @@ and node.js server.
 
 > cd server/
 > npm install
+> npm run dev
 
 #### client
 
 > cd auth_client/
 > npm install
 > npm start
+
