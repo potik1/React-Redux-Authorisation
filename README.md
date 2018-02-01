@@ -10,15 +10,14 @@ and node.js server.
 
 ### Getting Started
 
-##### server node.js:
+#### server node.js:
 
-> cd server/
-> npm install
-> npm run dev
+`>` cd server/
+`>` npm install
+`> `npm run dev]()
 
 #### client
 
 > cd auth_client/
 > npm install
 > npm start
-
