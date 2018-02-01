@@ -10,13 +10,13 @@ and node.js server.
 
 ##### server node.js
 
-cd server/
+- cd server/
 npm install
 npm run dev
 
 
 ##### client
 
-cd auth-client/
+- cd auth-client/
 npm install
 npm start
