@@ -11,8 +11,11 @@ and node.js server.
 ##### server node.js
 
 cd server/
+
 npm install
+
 npm run dev
+
 
 ##### client
 
