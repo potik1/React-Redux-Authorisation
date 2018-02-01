@@ -1,7 +1,8 @@
 import axios from 'axios';
 import history from '../utils/history';
 import {
-  AUTH_ERROR,
+  AUTHIN_ERROR,
+  AUTHUP_ERROR,
   UNAUTH_USER,
   AUTH_USER,
   FETCH_MESSAGE,
@@ -22,7 +23,7 @@ export function signinUser({email, password}) {  //{email:email, password:passwo
       history.push('/feature');
 
     }).catch(() => {
-      dispatch(authError('BAD EMAIL OR PASSWORD'));
+      dispatch(authInError('BAD EMAIL OR PASSWORD'));
     });
   };
 }
@@ -35,18 +36,23 @@ export function signupUser({email, password}) {
       dispatch({type: AUTH_USER});
       history.push('/feature');
     }).catch(error => {
-      dispatch(authError(error.response.data.error));
+      dispatch(authUpError(error.response.data.error));
     });
   };
 }
 
-export function authError(error) {
+export function authInError(error) {
   return {
-    type: AUTH_ERROR,
+    type: AUTHIN_ERROR,
     payload: error,
   };
 }
-
+export function authUpError(error) {
+  return {
+    type: AUTHUP_ERROR,
+    payload: error,
+  };
+}
 export function signoutUser() {
   localStorage.removeItem('token');
   return {type: UNAUTH_USER};

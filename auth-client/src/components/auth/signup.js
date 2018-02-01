@@ -8,11 +8,14 @@ import {renderFormFieldErr} from '../../utils/form';
 
 class Signup extends Component {
 
+
   handleFormSubmit(formProps) {
     this.props.signupUser(formProps);
   }
 
   render() {
+
+    //this.props.errorMessage = '';
 
     const {handleSubmit} = this.props;
 
@@ -25,7 +28,7 @@ class Signup extends Component {
           <Field name="passwordConfirm" type="password" label="Confirm Password"
                  component={renderFormFieldErr}/>
           <button className="btn btn-success">Sign up!</button>
-          {renderAlert(this.props.errorMessage)}
+          {renderAlert(this.props.errorUpMessage)}
         </form>
     );
   }
@@ -57,7 +60,7 @@ function validate(formProps) {
 }
 
 function mapStateToProps(state) {
-  return {errorMessage: state.auth.error};
+  return {errorUpMessage: state.auth.errorup};
 }
 
 export default reduxForm({

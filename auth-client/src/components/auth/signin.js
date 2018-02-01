@@ -21,14 +21,14 @@ class Signin extends Component {
           <Field name="email" type="text" label="Email" component={renderFormField} />
           <Field name="password" type="password" label="Password" component={renderFormField} />
           <button type="submit" className="btn btn-success">Sign in</button>
-          {renderAlert(this.props.errorMessage)}
+          {renderAlert(this.props.errorInMessage)}
         </form>
     );
   }
 }
 
 function mapStateToProps(state) {
-  return {errorMessage: state.auth.error};
+  return {errorInMessage: state.auth.errorin};
 }
 
 export default reduxForm({
