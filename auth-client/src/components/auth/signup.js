@@ -15,8 +15,6 @@ class Signup extends Component {
 
   render() {
 
-    //this.props.errorMessage = '';
-
     const {handleSubmit} = this.props;
 
     return (
